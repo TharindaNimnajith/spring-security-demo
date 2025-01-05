@@ -1,3 +1,13 @@
+spring:
+  devtools:
+    add-properties: true
+    livereload:
+      enabled: true
+    restart:
+      enabled: true
+
 logging:
   level:
     com.example.demo: trace
+    web: debug
+    sql: debug
