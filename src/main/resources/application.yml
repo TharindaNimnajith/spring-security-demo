@@ -1,3 +1,30 @@
 spring:
   application:
     name: spring-security-demo
+    group: com.example
+    version: 1.0.0
+  lifecycle:
+    timeout-per-shutdown-phase: 1m
+  threads:
+    virtual:
+      enabled: true
+
+server:
+  port: 8080
+  servlet:
+    context-path: /api
+  shutdown: graceful
+
+management:
+  endpoints:
+    web:
+      base-path: /management
+    access:
+      default: none
+  endpoint:
+    health:
+      access: read_only
+
+logging:
+  level:
+    com.example.demo: debug
